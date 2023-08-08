@@ -1,0 +1,21 @@
+.ytmusic-player.style-scope.player-minimize-button {
+    display: none; !important;
+}
+ytmusic-player-bar.style-scope.toggle-player-page-button > .tp-yt-paper-icon-button.style-scope {
+    display: none;  important;
+}
+ytmusic-player[player-ui-state_=MINIPLAYER] {
+    display: none;
+} 
+ytmusic-player-queue {
+  padding: 10px 0;
+}
+#player.ytmusic-player-page.style-scope {
+    bottom: 20px;
+}
+.left-items.ytmusic-player-queue-item {
+    --ytmusic-player-queue-item-thumbnail-size: 45px !important;
+}
+#player-bar-background {
+        background-color: #000000;
+}

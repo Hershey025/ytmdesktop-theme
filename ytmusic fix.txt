@@ -1,0 +1,159 @@
+/*ytmusic fix*/
+.ytmusic-player.style-scope.player-minimize-button {
+    display: none; !important;
+}
+tp-yt-paper-tab.ytmusic-player-page.style-scope.tab-header:nth-of-type(2) {
+    display: none; !important;
+}
+ytmusic-player-bar.style-scope.toggle-player-page-button > .tp-yt-paper-icon-button.style-scope {
+    display: none;  important;
+}
+ytmusic-player[player-ui-state_=MINIPLAYER] {
+    display: none;
+} 
+ytmusic-player-queue {
+  padding: 10px 0;
+}
+#player.ytmusic-player-page.style-scope {
+    bottom: 20px;
+}
+
+html:not(.style-scope)[dark], :not(.style-scope)[dark] {
+    --ytmusic-static-brand-red          : #1d1d1d !important;
+    --yt-spec-brand-link-text           : #4d4d4d !important;
+    --yt-spec-brand-button-background   : #1d1d1d !important;
+    --ytmusic-setting-item-toggle-active: #1d1d1d !important;
+    --yt-button-color                   : #1d1d1d !important;
+    --yt-red                            : #1d1d1d !important;
+    --ytmusic-nav-bar                   : #1d1d1d !important;
+}
+
+/* Progress Bar + Volume */
+#progress-bar.ytmusic-player-bar {
+    --paper-slider-active-color     : white !important;
+}
+#progress-bar.ytmusic-player-bar[focused],
+ytmusic-player-bar:hover #progress-bar.ytmusic-player-bar,
+.volume-slider.ytmusic-player-bar, .expand-volume-slider.ytmusic-player-bar {
+    --paper-slider-knob-color               : white !important;
+    --paper-slider-knob-start-color         : white !important;
+    --paper-slider-knob-start-border-color  : white !important;
+    --paper-progress-active-color           : white !important;
+}
+ytmusic-player-bar #right-controls #volume-slider {
+  opacity: 0.5 !important;
+  pointer-events: initial !important;
+}
+ytmusic-player-bar #right-controls #volume-slider #primaryProgress {
+  background: white !important;
+}
+ytmusic-player-bar #right-controls #volume-slider #sliderKnob .slider-knob-inner {
+  background: #1d1d1d !important;
+}
+
+/* Loading Wheel on Songs */
+ytmusic-play-button-renderer {
+    --ytmusic-play-button-loading-indicator-color: white !important;
+    --paper-spinner-color                        : white !important;
+}
+
+/* New Recommendations + More */
+a.ytmusic-content-update-chip {
+    background: #4d4d4d !important;
+    color: #fff !important;
+    --yt-endpoint-hover-color: rgba(255,255,255, .7) !important;
+}
+
+/* Increase the Image in the Bottom Bar */
+.thumbnail-image-wrapper.ytmusic-player-bar {
+    height: 100% !important;
+    padding-top: calc(var(--paper-progress-height) * 2);
+}
+ytmusic-app-layout .middle-controls .image.ytmusic-player-bar {
+    /* 2px is to remove the space for the progress bar and aligned to the bottom */
+    height: calc(100% - -1px) !important;
+    align-self: flex-end;
+}
+
+/* Swap Bottom Play Bar */
+ytmusic-app-layout > [slot=player-bar] {
+    grid-template-columns: 1fr 0fr 1fr;
+}
+ytmusic-app-layout .left-controls {
+    justify-content: flex-end !important;
+    grid-area: middle !important;
+    width: 300px;
+}
+
+ytmusic-app-layout .middle-controls {
+    justify-content: normal !important;
+
+    grid-area: start !important;
+    min-width: 300px;
+}
+
+@media (max-width: 1149px) {
+    ytmusic-app-layout .left-controls, ytmusic-app-layout .right-controls {
+        width: 150px !important;
+    }
+    ytmusic-app-layout .left-controls {
+        justify-content: flex-start !important;
+    }
+    ytmusic-app-layout .middle-controls {
+        min-width: 100px;
+    }
+}
+/*better fonts*/
+ytmusic-player-bar #left-controls .time-info {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 1px 16px 0 20px !important;
+}
+ytmusic-player-bar #middle-controls .song-info {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 1px 16px 0 20px !important;
+}
+/* Remove pointless "Album ()" from Album Header */
+#header .metadata .ytmusic-data-bound-header-renderer yt-formatted-string span.yt-formatted-string:nth-of-type(1),
+#header .metadata .ytmusic-data-bound-header-renderer yt-formatted-string span.yt-formatted-string:nth-of-type(2) {
+    display: none;
+}
+
+ytmusic-app-layout[player-fullscreened_] > [slot=player-bar] {
+    background: rgba(25,25,25,0.8) !important;
+    width: 100%;
+}
+.ytmusic-player-bar.style-scope.toggle-player-page-button {
+    display:none;
+}
+/* -=- YTM Desktop Specific Changes -=- */
+
+/* Scrollbar:   Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4d4d4d;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 18px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1d1d1d;
+}
+  ytmusic-player-bar 
+        {
+            background: #1d1d1d !important
+        }   
+
+/*change play pause button*/
+ytmusic-player-bar #left-controls .play-pause-button {
+  background: white;
+  border-radius: 119px;
+}
+ytmusic-player-bar #left-controls .play-pause-button svg path {
+  fill: #1d1d1d !important;
+}
+
